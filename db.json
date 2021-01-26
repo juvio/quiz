@@ -1,7 +1,7 @@
 {
-    "bg": "https://i.pinimg.com/originals/4b/c2/aa/4bc2aa50b747354a5552eaa7cd16673b.jpg",
-    "title": "Quiz CSS da Alura",
-    "description": "Teste os seus conhecimentos sobre CSS e vamos ver quantos layouts você vai deixar de quebrar",
+    "bg": "https://images2.alphacoders.com/240/thumb-1920-240942.jpg",
+    "title": "Quiz The Walking Dead",
+    "description": "Teste os seus conhecimentos sobre TWD",
     "questions": [
       {
         "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
@@ -31,8 +31,8 @@
     ],
     "theme": {
       "colors": {
-        "primary": "#d81b60",
-        "secondary": "#f48fb1",
+        "primary": "#3f3a0b",
+        "secondary": "#65613b",
         "mainBg": "#171B35",
         "contrastText": "#FFFFFF",
         "wrong": "#FF5722",
