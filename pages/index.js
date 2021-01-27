@@ -1,10 +1,14 @@
 import styled from "styled-components";
+import Head from 'next/head'
+import {useRouter} from 'next/router'
+
 import db from "../db.json";
 import Footer from "../src/components/Footer";
 import Widget from '../src/components/Widget';
 import QuizBackground from '../src/components/QuizBackground';
 import {QuizLogo}  from '../src/components/QuizLogo';
 import GitHubCorner from '../src/components/GithubCorner';
+
 
 //import logo from '../src/img/twd.png';
 
@@ -25,8 +29,15 @@ export const QuizContainer = styled.div`
 `;
 
 export default function Home() {
+
+  const router = useRouter();
+  const [name, setName] = React.useState('');
+
   return (
     <QuizBackground backgroundImage={db.bg}>
+      <Head>
+        <title>TWD Quiz</title> 
+      </Head>
       <QuizContainer>
         <QuizLogo src="https://lh5.googleusercontent.com/JyL-BvJcIxSAOjpeZZToDOPQG91mnKifRUcNRO6cGSER-N1uZJWhfAkfjW1EchbadQYLiiKrDQC00pNQC_w8IA3Mn-2VDMfFeaaldzZVtUnh2tdRBQU=w1280" />
         <Widget>
@@ -34,7 +45,19 @@ export default function Home() {
             <h1>{db.title}</h1>
           </Widget.Header>
           <Widget.Content>
-            <p>{db.description}</p>
+            <form onSubmit={function (event){
+              event.preventDefault();
+              router.push(`/quiz?name=${name}`);
+            }}>
+              <input 
+              onChange={function(event) {
+                setName(event.target.value);
+              }}
+              placeholder="Digite seu nome de zumbi"/>
+              <button type="submit" disabled={name.length <= 1}>
+                Jogar
+              </button>
+            </form>
           </Widget.Content>
         </Widget>
 
