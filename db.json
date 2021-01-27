@@ -5,27 +5,39 @@
     "questions": [
       {
         "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-        "title": "Como fazer um seletor por id via CSS?",
+        "title": "O que Glenn era antes do Apocalipse Zumbi?",
         "description": "Essa é pra aquecer",
-        "answer": 2,
+        "answer": 1,
         "alternatives": [
-          ".elemento",
-          "*elemento",
-          "#elemento",
-          "%elemento"
+          "Policial",
+          "Entregador de Pizza",
+          "Fazendeiro"
         ]
       },
       {
         "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-        "title": "Como fazer um background gradiente com css?",
-        "description": "Faz tempo em haha",
+        "title": "Quem é o escolhido no 'Uni-Duni-Tê' do Negan?",
+        "description": "Fico triste só de lembrar",
+        "answer": 2,
+        "alternatives": [
+           "Glenn",
+           "Carl",
+           "Abraham"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
+        "title": "Quando que a série foi lançada pela PRIMEIRA vez?",
+        "description": "Faz tempo!",
         "answer": 0,
         "alternatives": [
-           "background: linear-gradient(#e66465, #9198e5);",
-           "background: gradient(#e66465, #9198e5);"
+          "31 de outrubro de 2010",
+          "10 de setembro de 2009",
+          "31 de outubro de 2011"
         ]
       }
     ],
+    
     "external": [
       ""
     ],

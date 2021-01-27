@@ -8,9 +8,9 @@ import Widget from '../src/components/Widget';
 import QuizBackground from '../src/components/QuizBackground';
 import {QuizLogo}  from '../src/components/QuizLogo';
 import GitHubCorner from '../src/components/GithubCorner';
-
-
-//import logo from '../src/img/twd.png';
+import Input from '../src/components/Input';
+import Button from '../src/components/Button';
+import logo from '../src/assets/twd.png';
 
 const Title = styled.h1`
   font-size: 50px;
@@ -39,7 +39,7 @@ export default function Home() {
         <title>TWD Quiz</title> 
       </Head>
       <QuizContainer>
-        <QuizLogo src="https://lh5.googleusercontent.com/JyL-BvJcIxSAOjpeZZToDOPQG91mnKifRUcNRO6cGSER-N1uZJWhfAkfjW1EchbadQYLiiKrDQC00pNQC_w8IA3Mn-2VDMfFeaaldzZVtUnh2tdRBQU=w1280" />
+        <QuizLogo src={logo} />
         <Widget>
           <Widget.Header>
             <h1>{db.title}</h1>
@@ -49,14 +49,16 @@ export default function Home() {
               event.preventDefault();
               router.push(`/quiz?name=${name}`);
             }}>
-              <input 
-              onChange={function(event) {
-                setName(event.target.value);
-              }}
-              placeholder="Digite seu nome de zumbi"/>
-              <button type="submit" disabled={name.length <= 1}>
+              <Input 
+              name="nomeDoUsuario"
+              onChange={(event) => setName(event.target.value)}
+              placeholder="Digite seu nome de zumbi"
+              value={name}
+              />
+              
+              <Button type="submit" disabled={name.length <= 1}>
                 Jogar
-              </button>
+              </Button>
             </form>
           </Widget.Content>
         </Widget>
